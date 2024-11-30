@@ -195,14 +195,10 @@ footer {
     margin-top: 3rem;
 }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-footer a {
+footer a,
+footer .copyright,
+footer .contact-info,
+footer .contact-info a {
     color: #000;
 }
 
@@ -218,14 +214,23 @@ footer a {
     height: 24px;
 }
 
-footer .copyright {
-    color: #000;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
 }
-.content-info {
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-info {
     color: #000;
 }
 
-.content-info a {
+.contact-info a {
     color: #000;
 }
 
