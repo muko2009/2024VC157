@@ -1,0 +1,259 @@
+/* 基本設定 */
+:root {
+    --primary-color: darkred;
+    --secondary-color: #a19e9e;
+    --background-color: #000;
+    --text-color: #fff;
+    --max-width: 1200px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* ヘッダー */
+header {
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-bottom: 1px solid #fff;
+}
+
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+/* ナビゲーション */
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-direction: row;  /* 横並びを明示的に指定 */
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;  /* テキストの折り返しを防ぐ */
+}
+
+.nav-top:hover {
+    color: darkred;
+}
+
+.nav-menu:hover {
+    color:darkred;
+}
+
+.nav-info:hover {
+    color: darkred;
+}
+
+/* 動画エリア */
+.yakiniku_video {
+    padding: 0.5rem 1.5rem;
+    border-radius: 15px;
+}
+
+/* 電話ボタン */
+.btn-tel {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s;
+    white-space: nowrap;  /* 追加：テキストの折り返しを防ぐ */
+}
+
+.btn-tel a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;  /* 追加：インラインブロック要素として表示 */
+}
+
+
+
+/* メインコンテンツ */
+main {
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* セクション */
+.section {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+/* メニューグリッド */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+}
+
+.menu-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* 見出し */
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+h2, h3, h4 {
+    color: var(--primary-color);
+}
+
+.info-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.info-card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.info-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info-card th,
+.info-card td {
+    padding: 1rem;
+    border-bottom: 1px solid #333;
+    color: #fff;
+}
+
+.info-card th {
+    text-align: left;
+    width: 30%;
+    color: var(--primary-color);
+}
+
+.info-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* フッター */
+footer {
+    background-color: #7b7979;
+    color: #000;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+footer a {
+    color: #000;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
+
+footer .copyright {
+    color: #000;
+}
+.content-info {
+    color: #000;
+}
+
+.content-info a {
+    color: #000;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    nav {
+        order: 2;
+    }
+    
+    nav ul {
+        flex-direction: row;
+    }
+    
+    .yakiniku_video {
+        order: 3;
+    }
+    
+    .btn-tel {
+        order: 4;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}

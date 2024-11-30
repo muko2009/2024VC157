@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店舗情報 | 焼肉 牛工大</title>
+    <link rel="stylesheet" href="yakiniku.css">
+    <style>
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 4px rgba(109, 108, 108, 0.1);
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .info-table th,
+        .info-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+        }
+
+        .info-table th {
+            width: 30%;
+            color: var(--primary-color);
+        }
+
+        .opening-hours {
+            margin-top: 2rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="building_food_yakiniku.png" alt="焼肉 牛工大 ロゴ">
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="yakiniku.html" class="nav-top">トップ</a></li>
+                    <li><a href="yakinikumenu.html" class="nav-menu">メニュー</a></li>
+                    <li><a href="information.html" class="nav-info">店舗情報</a></li>
+                </ul>
+            </nav>
+            <div class="yakiniku_video">
+                <video src="onikuimages-1129131_h.mp4" autoplay muted playsinline loop width="30%"></video>
+            </div>
+            <div class="btn-tel">
+                <a href="tel:000-456-7890">000-456-7890</a>
+            </div>
+        </div>
+    </header>
+
+    <h1>店舗情報</h1>
+
+    <main>
+        <div class="info-grid">
+            <section class="info-card">
+                <h2>基本情報</h2>
+                <table class="info-table">
+                    <tr>
+                        <th>店名</th>
+                        <td>焼肉 牛工大</td>
+                    </tr>
+                    <tr>
+                        <th>住所</th>
+                        <td>〒000-0000 焼肉市美食町1-2-3</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>000-456-7890</td>
+                    </tr>
+                    <tr>
+                        <th>メール</th>
+                        <td>info@yakiniku.umai.up</td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>ご予約・お問い合わせはこちら</p>
+            <p><a href="tel:000-456-7890">Tel: 000-456-7890</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://x.com/chibakoudai_cit">
+                <img src="logo-black.png" alt="X（旧Twitter）">
+            </a>
+            <a href="https://www.instagram.com/chibakoudai/">
+                <img src="Instagram_Glyph_Black.jpg" alt="Instagram">
+            </a>
+        </div>
+
+        <p class="copyright">Copyright © Chiba Institute of Technology . All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

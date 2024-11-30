@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メニュー | 焼肉 牛工大</title>
+    <link rel="stylesheet" href="yakiniku.css">
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .menu-item {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-content {
+            padding: 1.5rem;
+        }
+
+        .menu-category {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            margin: 2rem 0 1rem;
+        }
+
+        .menu-title {
+            font-size: 1.25rem;
+            margin: 0.5rem 0;
+            color: var(--primary-color);
+        }
+
+        .menu-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="building_food_yakiniku.png" alt="焼肉 牛工大 ロゴ">
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="yakiniku.html" class="nav-top">トップ</a></li>
+                    <li><a href="yakinikumenu.html" class="nav-menu">メニュー</a></li>
+                    <li><a href="information.html" class="nav-info">店舗情報</a></li>
+                </ul>
+            </nav>
+            <div class="yakiniku_video">
+                <video src="onikuimages-1129131_h.mp4" autoplay muted playsinline loop width="30%"></video>
+            </div>
+            <div class="btn-tel">
+                <a href="tel:000-456-7890">000-456-7890</a>
+            </div>
+        </div>
+    </header>
+
+    <h1>メニュー一覧</h1>
+
+    <main>
+        <section>
+            <h2 class="menu-category">牛肉</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="koudai_karubi.jpg" alt="工大カルビ">
+                    <div class="menu-content">
+                        <h3 class="menu-title">工大カルビ</h3>
+                        <p class="menu-description">骨と骨の間の旨味の詰まった部位を丁寧にカット。当店の看板メニュー。</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="karubi.jpg" alt="カルビ">
+                    <div class="menu-content">
+                        <h3 class="menu-title">カルビ</h3>
+                        <p class="menu-description">牛肉のうまみ、甘味と香りが楽しめます。最も人気のある定番メニューのひとつ。</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="harami.jpg" alt="ハラミ">
+                    <div class="menu-content">
+                        <h3 class="menu-title">ハラミ</h3>
+                        <p class="menu-description">国民のアイドル！お店一押し</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="menu-category">豚肉</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="buta_tan.jpg" alt="トンたん塩">
+                    <div class="menu-content">
+                        <h3 class="menu-title">トンたん塩</h3>
+                        <p class="menu-description">コリコリ食感を楽しむ。牛タンでなくても満足できます。</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="buta_horumon.jpg" alt="やみつき豚ホルモン">
+                    <div class="menu-content">
+                        <h3 class="menu-title">やみつき豚ホルモン</h3>
+                        <p class="menu-description">この食感クセになる。</p>
+                    </div>
+                </div>
+            </div>
+            <h2 class="menu-category">鶏肉</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <img src="tori_yagen.jpg" alt="ハラミ付きヤゲン">
+                    <div class="menu-content">
+                        <h3 class="menu-title">ハラミ付きヤゲン</h3>
+                        <p class="menu-description">ジューシーなハラミがついた、コリコリの軟骨</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="tori_momo.jpg" alt="とりもも">
+                    <div class="menu-content">
+                        <h3 class="menu-title">とりもも</h3>
+                        <p class="menu-description">お子様にも人気。柔らかくてジューシー</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 他のセクション（豚肉、鶏肉）も同様の構造で -->
+    </main>
+
+    <footer>
+        <div class="contact-info">
+            <p>ご予約・お問い合わせはこちら</p>
+            <p><a href="tel:000-456-7890">Tel: 000-456-7890</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://x.com/chibakoudai_cit">
+                <img src="logo-black.png" alt="X（旧Twitter）">
+            </a>
+            <a href="https://www.instagram.com/chibakoudai/">
+                <img src="Instagram_Glyph_Black.jpg" alt="Instagram">
+            </a>
+        </div>
+
+        <p class="copyright">Copyright © Chiba Institute of Technology . All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
